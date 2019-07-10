@@ -1,6 +1,45 @@
-// :root {
-//   // Typography
-//   // Spacing
-//   // Grid
-//   // Color
-// }
+@import url('https://fonts.googleapis.com/css?family=Raleway:200i,300,400&display=swap');
+
+// Design system vars
+:root {
+  // General Vars
+  // Typography
+  --typography-size-xxl: 60px;
+  --typography-size-xl: 40px;
+  --typography-size-l: 35px;
+  --typography-size-d: 20px;
+
+  --typography-family-primary: 'Raleway';
+  --typography-family-secondary: 'Monaco';
+
+  --typography-weigth-regular: 400;
+  --typography-weigth-thin: 300;
+  --typography-weigth-extra-thin: 200;
+
+  --typography-style-regular: normal;
+  --typography-style-italic: italic;
+  
+  // Spacing
+  --spacing-size-xxxxl: 70px;
+  --spacing-size-xxxl: 50px;
+  --spacing-size-xxl: 35px;
+  --spacing-size-xl: 30px;
+  --spacing-size-l: 28px;
+  --spacing-size-d: 15px;
+  --spacing-size-s: 12px;
+  --spacing-size-sx: 7px;
+  
+  // Grid
+  --grid-template-columns: 1fr 1fr 1fr;
+
+  // Color
+  --color-purple: #ac53f2;
+  --color-gray: #5c5c5c;
+  --color-white: #ffffff;
+
+  // Shadow
+  --shadow-default: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+
+  // Components Vars:
+  --button-height: 50px;
+}
