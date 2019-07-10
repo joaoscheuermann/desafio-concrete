@@ -48,6 +48,7 @@
 
   // Shadow
   --shadow-default: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  --border-radius: 2px;
 
   // Components Vars:
   // Logo:
@@ -66,6 +67,8 @@
 
   // Text Input
   --input-height: var(--interaction-height);
+
+  // Search Bar
 }
 
 * {

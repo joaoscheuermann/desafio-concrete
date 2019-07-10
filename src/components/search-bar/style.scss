@@ -1,0 +1,11 @@
+.search-bar {
+  display: flex;
+
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+  overflow: hidden;
+
+  >.text-input {
+    width: 100%;
+  }
+}
