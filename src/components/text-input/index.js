@@ -1,9 +1,8 @@
 import './style.scss'
 import React from 'react'
 
-export default ({ ...props }) => {
-
+export default function TextInput ({ref, ...props }) {
   return (
-    <input className="text-input" type="text" placeholder="digite alguma coisa" {...props} />
+    <input className="text-input" type="text" {...props} />
   )
 }
