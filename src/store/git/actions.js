@@ -14,6 +14,8 @@ export const sucessFetching = (payload) => ({
 })
 
 export const fetchGithubUserData = (username) => async dispatch => {
+    console.log(username)
+
     const fetchGit = async (username, route='') => {
       return fetch(`https://api.github.com/users/${username}${route}`)
               .then(resposta => resposta.json())
@@ -24,8 +26,6 @@ export const fetchGithubUserData = (username) => async dispatch => {
     const user = await fetchGit(username)
     const repos = await fetchGit(username, '/repos')
     const starred = await fetchGit(username, '/starred')
-
-    console.log(user.message)
 
     if (user.message) {
       dispatch(failedFetching({ message: user.message }))

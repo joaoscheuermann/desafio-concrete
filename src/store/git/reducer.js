@@ -1,9 +1,9 @@
 const initialState = {
   fetching: false,
+  sucess: false,
   error: false,
   message: 'batata',
-  user: null,
-  repos: null
+  user: null
 }
 
 const git = (state = initialState, action) => {
@@ -22,8 +22,9 @@ const git = (state = initialState, action) => {
     case 'FAILED_FETCHING_DATA':
       return {
         ...initialState,
-        error: true,
-        message: action.erro.message
+        sucess: true,
+        // Processar e normatizar os dados
+        user: action.erro.message
       }
 
     default:
