@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+
+  height: var(--button-height);
+  padding: 0 var(--spacing-size-xxl);
+
+  background: var(--color-purple);
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  >.icon {
+    width: var(--button-icon-width);
+    height: var(--button-icon-height);;
+  }
+
+  >.typography {
+    color: var(--color-white);
+  }
+}

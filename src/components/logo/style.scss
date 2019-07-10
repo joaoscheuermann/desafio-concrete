@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: var(--logo-width);
+  height: var(--logo-height);
+
+  font-family: var(--typography-family-secondary);
+  font-size: var(--typography-size-xxl);
+
+  &.-small {
+    width: var(--logo-width-small);
+    height: var(--logo-height-small);
+    font-size: var(--typography-size-xl);
+  }
+
+  >.search {
+    font-family: var(--typography-family-primary);
+    font-weight: var(--typography-weigth-extra-thin);
+    font-style: var(--typography-style-italic);
+  }
+}

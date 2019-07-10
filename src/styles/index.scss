@@ -1,16 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200i,300,400&display=swap');
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400&display=swap');
+
+@font-face {
+  font-family: 'Monaco';
+  src: url('../assets/fonts/monaco-webfont.woff2') format('woff2'),
+       url('../assets/fonts/monaco-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Design system vars
 :root {
   // General Vars
   // Typography
+  --typography-family-primary: 'Raleway';
+  --typography-family-secondary: 'Monaco';
+
   --typography-size-xxl: 60px;
   --typography-size-xl: 40px;
   --typography-size-l: 35px;
   --typography-size-d: 20px;
-
-  --typography-family-primary: 'Raleway';
-  --typography-family-secondary: 'Monaco';
 
   --typography-weigth-regular: 400;
   --typography-weigth-thin: 300;
@@ -41,5 +50,14 @@
   --shadow-default: 0 0 4px 0 rgba(0, 0, 0, 0.4);
 
   // Components Vars:
+  // Logo:
+  --logo-width: 415px;
+  --logo-width-small: 280px;
+  --logo-height: 81px;
+  --logo-height-small: 50px;
+  
+  // Button
   --button-height: 50px;
+
+
 }
