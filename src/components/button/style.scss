@@ -11,9 +11,10 @@
   outline: none;
   cursor: pointer;
 
-  >.icon {
+  > .icon,
+  > svg {
     width: var(--button-icon-width);
-    height: var(--button-icon-height);;
+    height: var(--button-icon-height);
   }
 
   >.typography {

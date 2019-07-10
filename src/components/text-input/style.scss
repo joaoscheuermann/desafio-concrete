@@ -1,0 +1,11 @@
+.text-input {
+  height: var(--input-height);
+
+  padding: 0 var(--spacing-size-d);
+
+  font-family: var(--typography-family-primary);
+  font-size: var(--typography-size-d);
+  
+  outline: none;
+  border: none;
+}

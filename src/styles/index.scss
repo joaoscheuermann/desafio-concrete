@@ -55,9 +55,21 @@
   --logo-width-small: 280px;
   --logo-height: 81px;
   --logo-height-small: 50px;
+
+  // Layout vars
+  --interaction-height: 50px;
   
   // Button
-  --button-height: 50px;
+  --button-height: var(--interaction-height);
+  --button-icon-height: 30px;
+  --button-icon-width: 30px;
 
+  // Text Input
+  --input-height: var(--interaction-height);
+}
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
