@@ -12,6 +12,13 @@
 // Design system vars
 :root {
   // General Vars
+  // Grid
+  --grid-template-columns: 280px 1fr;
+  --grid-template-rows: auto 1fr;
+  --grid-column-gap: var(--spacing-size-xxxxl);
+  --grid-row-gap: var(--spacing-size-xxl);
+  --grid-template-areas: 'logo search-bar' 'user-data user-repos';
+
   // Typography
   --typography-family-primary: 'Raleway';
   --typography-family-secondary: 'Monaco';
@@ -37,9 +44,6 @@
   --spacing-size-d: 15px;
   --spacing-size-s: 12px;
   --spacing-size-sx: 7px;
-  
-  // Grid
-  --grid-template-columns: 1fr 1fr 1fr;
 
   // Color
   --color-purple: #ac53f2;
@@ -50,6 +54,9 @@
   --shadow-default: 0 0 4px 0 rgba(0, 0, 0, 0.4);
   --border-radius: 2px;
 
+  // Layout vars
+  --interaction-height: 50px;
+  
   // Components Vars:
   // Logo:
   --logo-width: 415px;
@@ -57,9 +64,6 @@
   --logo-height: 81px;
   --logo-height-small: 50px;
 
-  // Layout vars
-  --interaction-height: 50px;
-  
   // Button
   --button-height: var(--interaction-height);
   --button-icon-height: 30px;
@@ -67,8 +71,6 @@
 
   // Text Input
   --input-height: var(--interaction-height);
-
-  // Search Bar
 }
 
 * {
