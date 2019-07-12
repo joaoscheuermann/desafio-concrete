@@ -17,16 +17,26 @@
     font-style: var(--typography-style-italic);
   }
 
+  // Colors
+  &.-grey {
+    color: var(--color-grey);
+  }
+  &.-purple {
+    color: var(--color-purple);
+  }
+
   // Variations
   &.-title {
     font-size: var(--typography-size-l);
   }
   
   &.-description {
-    color: var(--color-grey);
+    @extend .-grey;
   }
 
   &.-property {
+    @extend .-grey;
+
     &::before {
       content: '';
       display: inline-block;

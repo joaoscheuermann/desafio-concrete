@@ -6,6 +6,7 @@ import { fetchGithubUserData } from '../../store/git/actions';
 import Logo from '../../components/logo'
 import SearchBar from '../../components/search-bar'
 import UserData from './components/user-data'
+import UserRepositories from './components/user-repositories'
 
 export default function SearchRoute ({ match, history }) {
   const dispatch = useDispatch()
@@ -28,10 +29,7 @@ export default function SearchRoute ({ match, history }) {
       <Logo small/>
       <SearchBar { ...searchBarProps }/>
       <UserData />
-
-      <div className="user-repos">
-        asdasd
-      </div>
+      <UserRepositories />
     </div>
   )
 }
