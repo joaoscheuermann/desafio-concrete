@@ -9,7 +9,7 @@ const Repositorie = ({ repositorie }) => (
   <div className="repositorie">
     <Title tag="a" href="repositorie.url" target="_blank" type="purple"> Repositorie.title </Title>
     <Text> asdasdassda </Text>
-    <Property icon="star">4000</Property>
+    <Property icon="star"> 4000 </Property>
   </div>
 )
 

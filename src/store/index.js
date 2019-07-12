@@ -1,12 +1,16 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-import git from './git/reducer'
+import status from './git/status'
+import user from './git/user'
+import repositories from './git/repositories'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const reducer = combineReducers({
-  git
+  status,
+  user,
+  repositories
 })
 
 const middlewares = applyMiddleware(
