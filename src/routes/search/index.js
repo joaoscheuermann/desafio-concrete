@@ -1,25 +1,32 @@
 import './style.scss'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchGithubUserData } from '../../store/git/actions';
 
 import Logo from '../../components/logo'
+import Title from '../../components/title'
 import SearchBar from '../../components/search-bar'
 import UserData from './components/user-data'
 import UserRepositories from './components/user-repositories'
+
+import { fetchGithubUserData } from '../../store/git/actions';
 
 export default function SearchRoute ({ match, history }) {
   const status = useSelector(state => state.status)
   const dispatch = useDispatch()
 
-  console.log(status)
+  const search = () => dispatch(fetchGithubUserData(match.params.username))
+  const statusRenderer = ({sucess, message}) => sucess ?
+                                                  (<><UserData/> <UserRepositories/></>) :
+                                                  (<Title className="message" type="purple">{ message }</Title>)
 
   useEffect(() => {
-    dispatch(fetchGithubUserData(match.params.username))
+    search()
   }, [])
 
   const handleOnSearch = ({value}) => {
-    if (value.length > 0) history.push(`/${value}`)
+    if (value.length === 0) return
+    history.push(`/${value}`)
+    search()
   }
 
   const searchBarProps = {
@@ -31,8 +38,7 @@ export default function SearchRoute ({ match, history }) {
     <div className="search-route">
       <Logo small/>
       <SearchBar { ...searchBarProps }/>
-      <UserData />
-      <UserRepositories />
+      { statusRenderer(status) }
     </div>
   )
 }

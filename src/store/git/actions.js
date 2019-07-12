@@ -13,19 +13,38 @@ export const sucessFetching = (payload) => ({
   payload
 })
 
-export const fetchGithubUserData = (username) => async dispatch => {
-    console.log(username)
+export const updateUser = (payload) => ({
+  type: 'UPDATE_USER',
+  payload
+})
 
+export const clearUser = (payload) => ({
+  type: 'CLEAR_USER',
+  payload
+})
+
+export const updateRepositories = (payload) => ({
+  type: 'UPDATE_REPOSITORIES',
+  payload
+})
+
+export const clearRepositories = (payload) => ({
+  type: 'CLEAR_REPOSITORIES',
+  payload
+})
+
+export const fetchGithubUserData = (username) => async dispatch => {
     const fetchGit = async (username, route='') => {
       return fetch(`https://api.github.com/users/${username}${route}`)
               .then(resposta => resposta.json())
     }
 
     dispatch(startFetching())
+    dispatch(clearUser())
+    dispatch(clearRepositories())
 
     const user = await fetchGit(username)
-    const repos = await fetchGit(username, '/repos')
-    const starred = await fetchGit(username, '/starred')
+    const repositories = await fetchGit(username, '/repos')
 
 
     if (user.message) {
@@ -33,5 +52,7 @@ export const fetchGithubUserData = (username) => async dispatch => {
       return
     }
 
-    dispatch(sucessFetching({ payload: { user, repos, starred } }))
+    dispatch(sucessFetching())
+    dispatch(updateUser(user))
+    dispatch(updateRepositories(repositories))
 }

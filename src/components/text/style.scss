@@ -1,3 +1,13 @@
+a {
+  &.text {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .text {
   font-family: var(--typography-family-primary);
   font-size: var(--typography-size-d);
@@ -8,6 +18,7 @@
   &.-thin {
     font-weight: var(--typography-weigth-thin);
   }
+
   &.-extra-thin {
     font-weight: var(--typography-weigth-extra-thin);
   }
@@ -21,6 +32,7 @@
   &.-grey {
     color: var(--color-grey);
   }
+
   &.-purple {
     color: var(--color-purple);
   }
@@ -29,7 +41,7 @@
   &.-title {
     font-size: var(--typography-size-l);
   }
-  
+
   &.-description {
     @extend .-grey;
   }
@@ -40,10 +52,10 @@
     &::before {
       content: '';
       display: inline-block;
-      width: 24px;
       height: 24px;
+      width: 24px;
       margin-right: var(--spacing-size-sx);
-      vertical-align: middle;
+      vertical-align: sub;
     }
   }
 

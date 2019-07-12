@@ -1,9 +1,11 @@
 .user-repositories {
+  width: 100%;
+
   .repositorie {
-    >.text {
-      &.-property {
-        margin-top: var(--spacing-size-sx)
-      }
+    margin-bottom: var(--spacing-size-xl);
+
+    >.text.-property {
+      margin-top: var(--spacing-size-sx);
     }
   }
 }
