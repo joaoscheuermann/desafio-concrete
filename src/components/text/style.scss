@@ -1,0 +1,70 @@
+.text {
+  font-family: var(--typography-family-primary);
+  font-size: var(--typography-size-d);
+  font-weight: var(--typography-weigth-regular);
+  font-style: var(--typography-style-regular);
+
+  // Wheight
+  &.-thin {
+    font-weight: var(--typography-weigth-thin);
+  }
+  &.-extra-thin {
+    font-weight: var(--typography-weigth-extra-thin);
+  }
+
+  // Style
+  &.-italic {
+    font-style: var(--typography-style-italic);
+  }
+
+  // Variations
+  &.-title {
+    font-size: var(--typography-size-l);
+  }
+  
+  &.-description {
+    color: var(--color-grey);
+  }
+
+  &.-property {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: var(--spacing-size-sx);
+      vertical-align: middle;
+    }
+  }
+
+  // Icons
+  &.-organization-icon {
+    &::before {
+      background: url('../../assets/icons/organization-icon.png');
+    }
+  }
+
+  &.-location-icon {
+    &::before {
+      background: url('../../assets/icons/location-icon.png');
+    }
+  }
+
+  &.-star-icon {
+    &::before {
+      background: url('../../assets/icons/star-icon.png');
+    }
+  }
+
+  &.-repositorie-icon {
+    &::before {
+      background: url('../../assets/icons/repositorie-icon.png');
+    }
+  }
+
+  &.-followers-icon {
+    &::before {
+      background: url('../../assets/icons/followers-icon.png');
+    }
+  }
+}

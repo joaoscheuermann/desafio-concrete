@@ -16,7 +16,9 @@ export default function SearchBar ({ onInput, onSearch, onKeyPress, placeholder 
       setValue(e.target.value)
     },
 
-    onKeyPress: ({ key }) => {
+    onKeyPress: (e) => {
+      let { key } = e
+      if (onKeyPress) onKeyPress(e)
       if (key === 'Enter' && onSearch) onSearch({ value })
     }
   }

@@ -27,6 +27,7 @@ export const fetchGithubUserData = (username) => async dispatch => {
     const repos = await fetchGit(username, '/repos')
     const starred = await fetchGit(username, '/starred')
 
+
     if (user.message) {
       dispatch(failedFetching({ message: user.message }))
       return

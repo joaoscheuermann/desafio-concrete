@@ -1,16 +1,17 @@
 import './style.scss'
 import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { fetchGithubUserData } from '../../store/git/actions';
 
 import Logo from '../../components/logo'
 import SearchBar from '../../components/search-bar'
-import { useDispatch } from 'react-redux'
-import { fetchGithubUserData } from '../../store/git/actions';
+import UserData from './components/user-data'
 
 export default function SearchRoute ({ match, history }) {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchGithubUserData(match.params.username))
+    // dispatch(fetchGithubUserData(match.params.username))
   })
 
   const handleOnSearch = ({value}) => {
@@ -26,9 +27,7 @@ export default function SearchRoute ({ match, history }) {
     <div className="search-route">
       <Logo small/>
       <SearchBar { ...searchBarProps }/>
-
-      <div className="user-data">
-      </div>
+      <UserData />
 
       <div className="user-repos">
         asdasd

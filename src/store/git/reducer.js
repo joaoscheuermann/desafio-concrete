@@ -13,18 +13,18 @@ const git = (state = initialState, action) => {
         ...initialState,
         fetching: true
       }
-    case 'SUCESS_FETCHING_DATA':
+    case 'FAILED_FETCHING_DATA':
       return {
         ...initialState,
         error: true,
         message: action.erro.message
       }
-    case 'FAILED_FETCHING_DATA':
+    case 'SUCESS_FETCHING_DATA':
       return {
         ...initialState,
         sucess: true,
         // Processar e normatizar os dados
-        user: action.erro.message
+        user: null
       }
 
     default:

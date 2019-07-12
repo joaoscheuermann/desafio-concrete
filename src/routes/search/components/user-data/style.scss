@@ -1,0 +1,18 @@
+.user-data {
+  >.avatar {
+    margin-bottom: var(--spacing-size-s);
+  }
+
+  >.user-name {
+    margin-bottom: var(--spacing-size-sx);
+  }
+
+  >.user-login {
+    margin-bottom: var(--spacing-size-xxl);
+    color: var(--color-grey);
+  }
+
+  >.user-info {
+    margin-bottom: var(--spacing-size-d);
+  }
+}
